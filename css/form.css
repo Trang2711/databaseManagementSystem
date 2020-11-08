@@ -1,0 +1,22 @@
+#signInForm, #signUpForm, #signUpForEmployeeForm, #signUpForCompanyForm{
+    width: 500px;
+    margin: 50px auto 0px;
+    padding: 50px 30px 90px;
+    background-color: white;
+}
+.form-wrapper{
+    padding: 30px 0px 50px;
+    width: 100%;
+    background-color: #ebebeb!important;
+    overflow: hidden;
+}
+.form-wrapper header{
+    text-align: center;
+}
+.form-wrapper header img{
+    height: 40px;
+}
+#backHome i {
+    font-size: 30px;
+    margin-left: 20px;
+}

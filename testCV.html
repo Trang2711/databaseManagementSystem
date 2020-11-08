@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/cv.css">
+    <link rel="stylesheet" href="./css/company.css">
+    <link rel="stylesheet" href="./css/jobSeeker.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="./images/logo.svg" width="100" height="100" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link text-dark" href="#">Tìm việc <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#">Đánh giá công ty</a>
+                </li>
+                <li class="nav-item text-dark">
+                    <a class="nav-link text-dark" href="#">Tạo CV của bạn</a>
+                </li>
+            </ul>
+            <span style="width: 40%;"></span>
+            <ul class="navbar-nav">
+                <li>
+                    <a class="nav-link text-dark" href="#"><i class="far fa-user" st></i>Trang Trịnh</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#">Nhà tuyển dụng/Đăng việc làm</a>
+                </li>
+                <li></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="container" class="bg-light">
+        <div class="wrapper-container ">
+            <header>
+                <h5>FPT Software</h5>
+                <div class="info-group">
+                    Website:
+                    <a href="https://www.fpt-software.com/" target="_blank">https://www.fpt-software.com/</a>
+                </div>
+                <div>
+                    <div class="info-group">
+                        <i class="far fa-envelope"></i>
+                        <span>Email: company24@gmail.com</span>
+                    </div>
+                    <div class="info-group">
+                        <i class="fas fa-phone"></i>
+                        <span>Số điện thoại: 0958589576</span>
+                    </div>
+                </div>
+            </header>
+            <div class="description">
+                <h5>About us</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit odit amet? Voluptatem id, eum
+                    dicta
+                    placeat neque incidunt exercitationem? Harum ducimus maxime in possimus nihil, culpa at? Blanditiis,
+                    alias.
+                </p>
+            </div>
+            <div class="list-job">
+                <div class="">
+                    <h5 style="padding-left: 5px; margin-bottom: 20px; display: inline-block;">Công việc đã đăng</h5>
+                    <div type="button" class="add-job" data-toggle="modal"
+                        data-target="#editJobModal">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+
+                    <div class="row">
+                        <div class="col" style="margin-bottom: 30px;">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="delete-card">
+                                        <i class="far fa-trash-alt"></i>
+                                    </div>
+                                    <h5>Packaging assistant manager nhà máy Nhật mới thành lập</h5>
+                                    <p class="lead" style="font-size: 20px;">Công ty: ABC Company<br>Lương: 10 - 15
+                                        triệu<br>Vị trí tuyển dụng: developer java, developer javascript</p>
+                                    <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
+                                        data-target="#showJobModal">
+                                        Chi tiết
+                                    </button>
+
+                                    <button type="button" class="btn btn-sm btn-secondary" data-toggle="modal"
+                                        data-target="#editJobModal">
+                                        Chỉnh sửa
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="delete-card">
+                                        <i class="far fa-trash-alt"></i>
+                                    </div>
+                                    <h5>Packaging assistant manager nhà máy Nhật mới thành lập</h5>
+                                    <p class="lead" style="font-size: 20px;">Công ty: ABC Company<br>Lương: 10 - 15
+                                        triệu<br>Vị trí tuyển dụng: developer java, developer javascript</p>
+                                    <a class="btn btn-primary btn-sm" href="#" role="button">Chi tiết</a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col" style="margin-bottom: 30px;">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="delete-card">
+                                        <i class="far fa-trash-alt"></i>
+                                    </div>
+                                    <h5>Packaging assistant manager nhà máy Nhật mới thành lập</h5>
+                                    <p class="lead" style="font-size: 20px;">Công ty: ABC Company<br>Lương: 10 - 15
+                                        triệu<br>Vị trí tuyển dụng: developer java, developer javascript</p>
+                                    <a class="btn btn-primary btn-sm" href="#" role="button">Chi tiết</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="delete-card">
+                                        <i class="far fa-trash-alt"></i>
+                                    </div>
+                                    <h5>Packaging assistant manager nhà máy Nhật mới thành lập</h5>
+                                    <p class="lead" style="font-size: 20px;">Công ty: ABC Company<br>Lương: 10 - 15
+                                        triệu<br>Vị trí tuyển dụng: developer java, developer javascript</p>
+                                    <a class="btn btn-primary btn-sm" href="#" role="button">Chi tiết</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="showJobModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header show-job-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Kiến trúc sư hệ thống</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body show-job-body">
+                                    <h6>Chức vụ</h6>
+                                    <p>Senior</p>
+                                    <h6>Thành phố</h6>
+                                    <p>Hà Nội</p>
+                                    <h6>Loại công việc</h6>
+                                    <p>Full time</p>
+                                    <h6>Mô tả</h6>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, unde quaerat eaque
+                                        enim voluptas saepe vitae numquam accusamus aperiam laudantium repudiandae
+                                        explicabo dolorum obcaecati tempore! Harum nihil porro rerum expedita!
+                                    </p>
+                                    <h6>Yêu cầu kĩ năng</h6>
+                                    <p><span>Python</span><span>Networking</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="editJobModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header show-job-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Kiến trúc sư hệ thống</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body show-job-body">
+                                    <h6>Chức vụ</h6>
+                                    <input class="form-control form-control-sm" type="text"
+                                        placeholder=".form-control-sm">
+                                    <h6>Thành phố</h6>
+                                    <input class="form-control form-control-sm" type="text"
+                                        placeholder=".form-control-sm">
+                                    <h6>Loại công việc</h6>
+                                    <input class="form-control form-control-sm" type="text"
+                                        placeholder=".form-control-sm">
+                                    <h6>Mô tả</h6>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    <h6>Yêu cầu kĩ năng</h6>
+                                    <input class="form-control form-control-sm" type="text"
+                                        placeholder=".form-control-sm">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-sm btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

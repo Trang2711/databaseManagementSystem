@@ -1,0 +1,82 @@
+body{
+    font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+nav{
+    margin-bottom: 50px;
+}
+.navbar-nav .active{
+    border-bottom: solid 3px #007bff;
+}
+
+nav i{
+    margin-right: 5px;
+}
+
+div.container-body{
+    width: 80%;
+    margin: auto;
+}
+
+/* search form */
+.search-form{
+    margin-bottom: 90px;
+}
+.search-form:first-child div{
+    margin-right: 25px;
+}
+section.search .form-control{
+    margin: 0px 15px;
+}
+.salary{
+    width: 800px;
+}
+.salary .input-group input{
+    border-radius: 5px 0px 0px 5px !important;
+    width: 50px!important;
+}
+
+.job-search{
+    width: 500px;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 4px rgb(139, 139, 139);
+    margin: 10px 25px 20px 10px;
+}
+
+/* advertisement */
+.advertisement{
+    margin: 30px auto 60px;
+    text-align: center;
+}
+
+/* search popular */
+.search-popular{
+    width: 70%;
+    margin: 0px auto 50px;
+    text-align: center;
+}
+.search-popular h2{
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.search-popular span{
+    border-radius: 8px;
+    font-size: 19px;
+    padding: 8px 12px;
+    margin: 5px 10px;
+    color: #2d2d2d;
+    background-color: #d4d2d0;
+}
+.search-popular span i{
+    font-size: 13px;
+    margin-right: 8px;
+}
+
+/* create CV */
+.createCV{
+    text-align: center;
+}
+.createCV h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+}

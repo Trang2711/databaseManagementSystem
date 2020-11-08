@@ -1,0 +1,37 @@
+.wrapper-container{
+    width: 80%;
+    margin: auto;
+}
+header, .description{
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.description p{
+    padding-left: 40px;
+}
+.info-group{
+    padding-left: 40px;
+    margin-bottom: 7px;
+}
+.info-group i{
+    color: rgb(56, 109, 255);
+}
+.delete-card{
+    text-align: right;
+    font-size: 17px;
+}
+.show-job-body p{
+    font-size: 17px;
+    padding-left: 10px;
+}
+.show-job-body p span{
+    margin-right:8px;
+}
+.add-job{
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 10px;
+    color:  rgb(56, 109, 255);
+}

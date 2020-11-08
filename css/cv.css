@@ -1,0 +1,41 @@
+.note{
+    font-size: 16px;
+    color: rgb(155, 152, 152);
+    font-style: italic;
+}
+i{
+    padding-right: 5px;
+}
+.info-box{
+    background-color: white!important;
+    border: none!important;
+    box-shadow: 0 0 5px 5px rgb(219, 228, 235);
+    margin: 20px;
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border-radius: 50%;
+    background-image: url('../images/flash-icon.jpg');
+    background-position: center center;
+}
+.side-left{
+    width: 300px;
+    height: 100vh;
+    padding: 50px 10px 0px 20px;
+    float: left;
+}
+.side-left-nav{
+    list-style-type: none;
+}
+.side-left-nav li{
+    padding: 8px;
+    margin-bottom: 5px;
+}
+.side-left-nav li.active{
+    border-right: solid 3px #007bff;
+}
+.side-left-nav li i{
+    margin-left: 5px;
+}
