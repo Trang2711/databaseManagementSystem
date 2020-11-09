@@ -1,10 +1,14 @@
-const firebaseConfig = {
-    apiKey: "AIzaSyBiN2nhBHJLsu4O6bF7SoQ3fUVJLGselQI",
-    authDomain: "chatapp-ci.firebaseapp.com",
-    databaseURL: "https://chatapp-ci.firebaseio.com",
-    projectId: "chatapp-ci",
-    storageBucket: "chatapp-ci.appspot.com",
-    messagingSenderId: "529991615918",
-    appId: "1:529991615918:web:4271209ceb1a2b2719343f"
-  };
-  console.log(firebase.initializeApp(firebaseConfig).database);
+var firebaseConfig = {
+  apiKey: "AIzaSyBwpqCGd8GhZVnHv5jakRPNmtAyIbGD1LQ",
+  authDomain: "itviec.firebaseapp.com",
+  databaseURL: "https://itviec.firebaseio.com",
+  projectId: "itviec",
+  storageBucket: "itviec.appspot.com",
+  messagingSenderId: "314254035724",
+  appId: "1:314254035724:web:f50e2ea6cd932bc6295729",
+  measurementId: "G-0M6HBJDJQW"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+console.log(firebase.database());
