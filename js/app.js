@@ -1,7 +1,7 @@
 var firebaseConfig = {
   apiKey: "AIzaSyBwpqCGd8GhZVnHv5jakRPNmtAyIbGD1LQ",
   authDomain: "itviec.firebaseapp.com",
-  databaseURL: "https://itviec-trinhtrang.firebaseio.com/",
+  databaseURL: "https://itviec.firebaseio.com/",
   projectId: "itviec",
   storageBucket: "itviec.appspot.com",
   messagingSenderId: "314254035724",

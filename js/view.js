@@ -10,12 +10,12 @@ view.signIn =
 <div class="form-group">
     <label for="usernameInput">Username</label>
     <input type="text" class="form-control" id="usernameInput" aria-describedby="usernameHelp">
-    <small id="usernameHelp" class="form-text text-muted"></small>
+    <small id="usernameHelp" class="form-text"></small>
 </div>
 <div class="form-group">
     <label for="passwordInput">Password</label>
     <input type="password" class="form-control" id="passwordInput" aria-describedby="passwordHelp">
-    <small id="passwordHelp" class="form-text text-muted"></small>
+    <small id="passwordHelp" class="form-text"></small>
 </div>
 
 <button type="submit" class="btn btn-primary">Submit</button>
@@ -33,27 +33,27 @@ view.signUpForCompany =
 <div class="form-group">
   <label for="exampleInputEmail1">Tên công ty</label>
   <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  <small id="emailHelp" class="form-text"></small>
 </div>
 <div class="form-group">
   <label for="exampleInputEmail1">Email address</label>
   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  <small id="emailHelp" class="form-text"></small>
 </div>
 <div class="form-group">
   <label for="exampleInputEmail1">Số điện thoại</label>
   <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  <small id="emailHelp" class="form-text"></small>
 </div>
 <div class="form-group">
   <label for="exampleInputPassword1">Password</label>
   <input type="password" class="form-control" id="exampleInputPassword1">
-  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  <small id="emailHelp" class="form-text"></small>
 </div>
 <div class="form-group">
   <label for="exampleInputPassword1">Nhập lại password</label>
   <input type="password" class="form-control" id="exampleInputPassword1">
-  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  <small id="emailHelp" class="form-text"></small>
 </div>
 <button type="submit" class="btn btn-primary">Đăng kí</button>
 </form>
@@ -68,29 +68,29 @@ view.signUpForEmployee =
 <form class="sign-up" id="signUpForEmployeeForm">
 <h3>Đăng nhập</h3>
 <div class="form-group">
-    <label for="exampleInputEmail1">Họ tên</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="usernameInput">Username</label>
+    <input type="text" class="form-control" id="usernameInput" aria-describedby="usernameHelp">
+    <small id="usernameHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+</div>
+<div class="form-group">
+    <label for="emailInput">Email address</label>
+    <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp">
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 </div>
 <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <label for="phoneNumberInput">Số điện thoại</label>
+    <input type="text" class="form-control" id="phoneNumberInput" aria-describedby="phoneNumberHelp">
+    <small id="phoneNumberHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 </div>
 <div class="form-group">
-    <label for="exampleInputEmail1">Số điện thoại</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <label for="passwordInput">Password</label>
+    <input type="password" class="form-control" id="passwordInput">
+    <small id="passwordHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 </div>
 <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-</div>
-<div class="form-group">
-    <label for="exampleInputPassword1">Nhập lại password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <label for="re-passwordInput">Nhập lại password</label>
+    <input type="password" class="form-control" id="re-passwordInput">
+    <small id="re-passwordHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 </div>
 
 <button type="submit" class="btn btn-primary">Đăng kí</button>
