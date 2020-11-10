@@ -139,123 +139,104 @@ view.home =
 
 <div class="container-body">
 <section class="search">
-    <form class="search-form">
-        <div class="form-group row">
-            <label for="inputJob" class="col-form-label">Tìm kiếm</label>
-            <div class="col-sm-4">
-                <input type="text" class="form-control" id="inputJob" placeholder="Kĩ năng, vị trí, công ty">
-            </div>
-            <label for="inputPlace" class="col-form-label">Địa điểm</label>
-            <div class="col-sm-3">
-                <input type="text" class="form-control" id="inputPlace" placeholder="Hà nội">
-            </div>
-            <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+<form id="search-form" class="search-form" onsubmit="search(event)">
+    <div class="form-group row">
+        <label for="inputJob" class="col-form-label">Tìm kiếm</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" id="inputJob" placeholder="Loại công việc">
         </div>
-        <div class="form-group row">
-            <select class="form-control form-control-sm" id="datePost" style="width: 140px">
-                <option selected>Ngày đăng</option>
-                <option value="1">24 giờ qua</option>
-                <option value="2">3 ngày qua</option>
-                <option value="3">7 ngày qua</option>
-                <option value="3">14 ngày qua</option>
-            </select>
-
-            <select class="form-control form-control-sm" id="jobType" style="width: 150px">
-                <option selected>Loại việc làm</option>
-                <option value="2">Hợp đồng</option>
-                <option value="3">Thực tập</option>
-                <option value="3">Bán thời gian</option>
-            </select>
-
-            <select class="form-control form-control-sm" id="company" style="width: 140px">
-                <option selected>Công ty</option>
-            </select>
-
-            <div>
-                <input type="text" class="form-control form-control-sm" id="inputPlace" placeholder="Ngôn ngữ"
-                    style="width: 120px">
-            </div>
-
-            <div class="input-group input-group-sm mb-3" style="width: 260px;">
-                <label class="col-form-label col-form-label-sm" for="salaryMin" style="margin-right: 10px;">Mức
-                    lương từ</label>
-                <input id="salaryMin" type="number" class="form-control" placeholder="10"
-                    style="margin: 0px; border-radius: 4px 0px 0px 4px">
-                <div class="input-group-append">
-                    <span class="input-group-text">triệu</span>
-                </div>
-            </div>
-
-            <div class="input-group input-group-sm mb-3" style="width: 190px;">
-                <label class="col-form-label col-form-label-sm" for="salaryMin"
-                    style="margin-right: 10px;">Đến</label>
-                <input id="salaryMax" type="number" class="form-control" placeholder="20"
-                    style="margin: 0px; border-radius: 4px 0px 0px 4px">
-                <div class="input-group-append">
-                    <span class="input-group-text">triệu</span>
-                </div>
-            </div>
+        <label for="inputPlace" class="col-form-label">Địa điểm</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="inputPlace" placeholder="Thành phố">
         </div>
-    </form>
-
-    <div class="search-popular">
-        <h2>Tìm kiếm phổ biến</h2>
-        <span><i class="fas fa-search"></i>Hà Nội</span>
-        <span><i class="fas fa-search"></i>Thành phố Hồ Chí Minh</span>
+        <button type="submit" class="btn btn-primary">Tìm kiếm</button>
     </div>
+    <div class="form-group row">
+        <select class="form-control form-control-sm" id="datePost" style="width: 140px">
+            <option selected>Ngày đăng</option>
+            <option value="1">24 giờ qua</option>
+            <option value="3">3 ngày qua</option>
+            <option value="7">7 ngày qua</option>
+            <option value="14">14 ngày qua</option>
+        </select>
 
-    <div class="result-search d-flex flex-wrap">
-        <div class="job-search">
-            <h5>Packaging assistant manager nhà máy Nhật mới thành lập</h5>
-            <p class="lead" style="font-size: 20px;">Công ty: ABC Company<br>Lương: 10 - 15 triệu<br>Vị trí tuyển dụng: developer java, developer javascript</p>
-            <hr class="my-4">
-            <p>Thời gian đăng: 10 ngày trước</p>
-            <a class="btn btn-primary btn-sm" href="#" role="button">Chi tiết</a>
+        <select class="form-control form-control-sm" id="employeeType" style="width: 150px">
+            <option selected>Loại nhân viên</option>
+            <option value="Permanent employees">Permanent employees</option>
+            <option value="Casual employees">Casual employees</option>
+            <option value="Apprentices employees">Apprentices employees</option>
+            <option value="Employment agency staff">Employment agency staff</option>
+        </select>
+        <div>
+            <input type="text" class="form-control form-control-sm" id="company" placeholder="Công ty"
+                style="width: 120px">
         </div>
-
-        <div class="job-search">
-            <h5>Packaging assistant manager nhà máy Nhật mới thành lập</h5>
-            <p class="lead" style="font-size: 20px;">Công ty: ABC Company<br>Lương: 10 - 15 triệu<br>Vị trí tuyển dụng: developer java, developer javascript</p>
-            <hr class="my-4">
-            <p>Thời gian đăng: 10 ngày trước</p>
-            <a class="btn btn-primary btn-sm" href="#" role="button">Chi tiết</a>
-        </div>
-
-        <div class="job-search">
-            <h5>Packaging assistant manager nhà máy Nhật mới thành lập</h5>
-            <p class="lead" style="font-size: 20px;">Công ty: ABC Company<br>Lương: 10 - 15 triệu<br>Vị trí tuyển dụng: developer java, developer javascript</p>
-            <hr class="my-4">
-            <p>Thời gian đăng: 10 ngày trước</p>
-            <a class="btn btn-primary btn-sm" href="#" role="button">Chi tiết</a>
+        <div>
+            <input type="text" class="form-control form-control-sm" id="skill" placeholder="Kỹ năng/ngôn ngữ"
+                style="width: 320px">
         </div>
     </div>
-    <nav aria-label="Page navigation example">
-        <ul class="pagination">
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+</form>
+
+<div class="search-popular">
+    <h2>Tìm kiếm phổ biến</h2>
+    <span><i class="fas fa-search"></i>Hà Nội</span>
+    <span><i class="fas fa-search"></i>Thành phố Hồ Chí Minh</span>
+</div>
+
+<div id="outputSearch" class="result-search d-flex flex-wrap">
+    <div id="text"></div>
+    <div class="job-search">
+        <h5>Packaging assistant manager nhà máy Nhật mới thành lập</h5>
+        <p class="lead" style="font-size: 20px;">Công ty: ABC Company<br>Lương: 10 - 15 triệu<br>Vị trí tuyển dụng: developer java, developer javascript</p>
+        <hr class="my-4">
+        <p>Thời gian đăng: 10 ngày trước</p>
+        <a class="btn btn-primary btn-sm" href="#" role="button">Chi tiết</a>
+    </div>
+
+    <div class="job-search">
+        <h5>Packaging assistant manager nhà máy Nhật mới thành lập</h5>
+        <p class="lead" style="font-size: 20px;">Công ty: ABC Company<br>Lương: 10 - 15 triệu<br>Vị trí tuyển dụng: developer java, developer javascript</p>
+        <hr class="my-4">
+        <p>Thời gian đăng: 10 ngày trước</p>
+        <a class="btn btn-primary btn-sm" href="#" role="button">Chi tiết</a>
+    </div>
+
+    <div class="job-search">
+        <h5>Packaging assistant manager nhà máy Nhật mới thành lập</h5>
+        <p class="lead" style="font-size: 20px;">Công ty: ABC Company<br>Lương: 10 - 15 triệu<br>Vị trí tuyển dụng: developer java, developer javascript</p>
+        <hr class="my-4">
+        <p>Thời gian đăng: 10 ngày trước</p>
+        <a class="btn btn-primary btn-sm" href="#" role="button">Chi tiết</a>
+    </div>
+</div>
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
 </section>
 
 <section class="advertisement">
-    <p>Tạo CV của bạn – Chỉ mất vài giây thôi</p>
-    <p>Nhà tuyển dụng: Đăng việc làm – Tuyển dụng nhanh chóng, dễ dàng</p>
+<p>Tạo CV của bạn – Chỉ mất vài giây thôi</p>
+<p>Nhà tuyển dụng: Đăng việc làm – Tuyển dụng nhanh chóng, dễ dàng</p>
 </section>
 
 <section class="createCV">
-    <h2>Dễ dàng ứng tuyển việc làm</h2>
-    <button type="button" class="btn btn-primary">Tạo CV của bạn</button>
+<h2>Dễ dàng ứng tuyển việc làm</h2>
+<button type="button" class="btn btn-primary">Tạo CV của bạn</button>
 </section>
 
 
@@ -488,15 +469,15 @@ view.infoPersonalEdit =
 
 view.search = 
 `<section class="search">
-<form class="search-form">
+<form id="search-form" class="search-form" onsubmit="search(event)">
     <div class="form-group row">
         <label for="inputJob" class="col-form-label">Tìm kiếm</label>
         <div class="col-sm-4">
-            <input type="text" class="form-control" id="inputJob" placeholder="Kĩ năng, vị trí, công ty">
+            <input type="text" class="form-control" id="inputJob" placeholder="Loại công việc">
         </div>
         <label for="inputPlace" class="col-form-label">Địa điểm</label>
         <div class="col-sm-3">
-            <input type="text" class="form-control" id="inputPlace" placeholder="Hà nội">
+            <input type="text" class="form-control" id="inputPlace" placeholder="Thành phố">
         </div>
         <button type="submit" class="btn btn-primary">Tìm kiếm</button>
     </div>
@@ -504,45 +485,25 @@ view.search =
         <select class="form-control form-control-sm" id="datePost" style="width: 140px">
             <option selected>Ngày đăng</option>
             <option value="1">24 giờ qua</option>
-            <option value="2">3 ngày qua</option>
-            <option value="3">7 ngày qua</option>
-            <option value="3">14 ngày qua</option>
+            <option value="3">3 ngày qua</option>
+            <option value="7">7 ngày qua</option>
+            <option value="14">14 ngày qua</option>
         </select>
 
-        <select class="form-control form-control-sm" id="jobType" style="width: 150px">
-            <option selected>Loại việc làm</option>
-            <option value="2">Hợp đồng</option>
-            <option value="3">Thực tập</option>
-            <option value="3">Bán thời gian</option>
+        <select class="form-control form-control-sm" id="employeeType" style="width: 150px">
+            <option selected>Loại nhân viên</option>
+            <option value="Permanent employees">Permanent employees</option>
+            <option value="Casual employees">Casual employees</option>
+            <option value="Apprentices employees">Apprentices employees</option>
+            <option value="Employment agency staff">Employment agency staff</option>
         </select>
-
-        <select class="form-control form-control-sm" id="company" style="width: 140px">
-            <option selected>Công ty</option>
-        </select>
-
         <div>
-            <input type="text" class="form-control form-control-sm" id="inputPlace" placeholder="Ngôn ngữ"
+            <input type="text" class="form-control form-control-sm" id="company" placeholder="Công ty"
                 style="width: 120px">
         </div>
-
-        <div class="input-group input-group-sm mb-3" style="width: 260px;">
-            <label class="col-form-label col-form-label-sm" for="salaryMin" style="margin-right: 10px;">Mức
-                lương từ</label>
-            <input id="salaryMin" type="number" class="form-control" placeholder="10"
-                style="margin: 0px; border-radius: 4px 0px 0px 4px">
-            <div class="input-group-append">
-                <span class="input-group-text">triệu</span>
-            </div>
-        </div>
-
-        <div class="input-group input-group-sm mb-3" style="width: 190px;">
-            <label class="col-form-label col-form-label-sm" for="salaryMin"
-                style="margin-right: 10px;">Đến</label>
-            <input id="salaryMax" type="number" class="form-control" placeholder="20"
-                style="margin: 0px; border-radius: 4px 0px 0px 4px">
-            <div class="input-group-append">
-                <span class="input-group-text">triệu</span>
-            </div>
+        <div>
+            <input type="text" class="form-control form-control-sm" id="skill" placeholder="Kỹ năng/ngôn ngữ"
+                style="width: 120px">
         </div>
     </div>
 </form>
@@ -553,7 +514,8 @@ view.search =
     <span><i class="fas fa-search"></i>Thành phố Hồ Chí Minh</span>
 </div>
 
-<div class="result-search d-flex flex-wrap">
+<div id="outputSearch" class="result-search d-flex flex-wrap">
+    <div id="text"></div>
     <div class="job-search">
         <h5>Packaging assistant manager nhà máy Nhật mới thành lập</h5>
         <p class="lead" style="font-size: 20px;">Công ty: ABC Company<br>Lương: 10 - 15 triệu<br>Vị trí tuyển dụng: developer java, developer javascript</p>

@@ -2,12 +2,11 @@ function directionPage(){
     var container = document.querySelector('.container-body')
     var findJob = document.getElementById('findJobBtn');
     var cv = document.getElementById("myCV");
-
     container.innerHTML = view.search
-
     findJob.addEventListener('click', event=>{
         event.preventDefault();
         container.innerHTML = view.search;
+        search();
     });
 
     cv.addEventListener('click', event=>{
