@@ -2,6 +2,7 @@ function directionPage(){
     var container = document.querySelector('.container-body')
     var findJob = document.getElementById('findJobBtn');
     var cv = document.getElementById("myCV");
+    var signOut = document.getElementById('lognOut');
 
     container.innerHTML = view.search
 
@@ -17,7 +18,10 @@ function directionPage(){
         cvDirection();
     });
 
-
+    signOut.addEventListener('click', function (event) {
+        event.preventDefault();
+        window.location.href = "./home.html"
+    })
 }
 directionPage();
 function cvDirection(){
