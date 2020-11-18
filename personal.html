@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-    <title>Document</title>
+    <title>Personal</title>
 </head>
 
 <body>
@@ -40,13 +40,14 @@
                     <li>
                         <!-- <a class="nav-link text-dark" href="#"><i class="far fa-user" st></i>Trang Trịnh</a> -->
                         <div class="dropdown">
-                            <a class="nav-link text-dark" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Trang Trịnh
+                            <a class="nav-link text-dark" id="userAccountIcon" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a id="lognOut" class="dropdown-item" href="#">Đăng xuất</a>
+                            <div class="dropdown-menu" aria-labelledby="userAccountIcon">
+                                <a id="lognOut" class="dropdown-item" href="#">Đăng xuất</a>
                             </div>
-                          </div>
+                        </div>
                     </li>
                     <li></li>
                 </ul>
@@ -66,8 +67,17 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/form.js"></script>
     <script src="./js/view.js"></script>
     <script src="./js/personal.js"></script>
+
+
 </body>
 
 </html>

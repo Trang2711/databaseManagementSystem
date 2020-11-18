@@ -31,29 +31,29 @@ view.signUpForCompany =
 <form class="sign-up" id="signUpForCompanyForm">
 <h3>Đăng nhập cho công ty</h3>
 <div class="form-group">
-  <label for="exampleInputEmail1">Tên công ty</label>
-  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  <label for="usernameInput">Username</label>
+  <input type="text" class="form-control" id="usernameInput" aria-describedby="usernameHelp">
+  <small id="usernameHelp" class="form-text"></small>
+</div>
+<div class="form-group">
+  <label for="emailInput">Email address</label>
+  <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp">
   <small id="emailHelp" class="form-text"></small>
 </div>
 <div class="form-group">
-  <label for="exampleInputEmail1">Email address</label>
-  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  <small id="emailHelp" class="form-text"></small>
+  <label for="phoneNumberInput">Số điện thoại</label>
+  <input type="text" class="form-control" id="phoneNumberInput" aria-describedby="phoneNumberHelp">
+  <small id="phoneNumberHelp" class="form-text"></small>
 </div>
 <div class="form-group">
-  <label for="exampleInputEmail1">Số điện thoại</label>
-  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  <small id="emailHelp" class="form-text"></small>
+  <label for="passwordInput">Password</label>
+  <input type="password" class="form-control" id="passwordInput">
+  <small id="passwordHelp" class="form-text"></small>
 </div>
 <div class="form-group">
-  <label for="exampleInputPassword1">Password</label>
-  <input type="password" class="form-control" id="exampleInputPassword1">
-  <small id="emailHelp" class="form-text"></small>
-</div>
-<div class="form-group">
-  <label for="exampleInputPassword1">Nhập lại password</label>
-  <input type="password" class="form-control" id="exampleInputPassword1">
-  <small id="emailHelp" class="form-text"></small>
+  <label for="re-passwordInput">Nhập lại password</label>
+  <input type="password" class="form-control" id="re-passwordHelp">
+  <small id="re-passwordHelp" class="form-text"></small>
 </div>
 <button type="submit" class="btn btn-primary">Đăng kí</button>
 </form>
@@ -111,14 +111,8 @@ view.home =
         <li class="nav-item active">
             <a class="nav-link text-dark" href="#">Tìm việc <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" href="#">Đánh giá công ty</a>
-        </li>
-        <li class="nav-item text-dark">
-            <a class="nav-link text-dark" href="#">Tạo CV của bạn</a>
-        </li>
     </ul>
-    <span style="width: 30%;"></span>
+    <span style="width: 40%;"></span>
     <ul class="navbar-nav">
         <!-- <li>
             <a class="nav-link text-dark" href="#"><i class="far fa-user" st></i>Trang Trịnh</a>
@@ -260,6 +254,7 @@ view.home =
 
 
 </div>`
+
 view.infoPersonalLayout =
 `<div class="d-flex justify-content-around bg-light">
 <div class="side-left bg-light">
@@ -272,12 +267,13 @@ view.infoPersonalLayout =
     
 </div>
 </div>`
+
 view.showPersonal = 
 `<div class="row">
 <div class="col">
     <div class=" info-box" style="text-align: center; padding: 30px 0px;">
         <div class="avatar"></div> <br>
-        <h4>Nguyễn Văn Anh</h4>
+        <h4 class="fullname">Nguyễn Văn Anh</h4>
     </div>
 
 </div>
@@ -290,54 +286,30 @@ view.showPersonal =
             <tbody>
                 <tr>
                     <td>Họ Tên:</td>
-                    <td>Nguyễn Văn A</td>
+                    <td class="fullname">Nguyễn Văn A</td>
                 </tr>
                 <tr>
                     <td>Ngày sinh:</td>
-                    <td>1/2/1998</td>
+                    <td id="dayOfBirth">1/2/1998</td>
                 </tr>
                 <tr>
                     <td>Số điện thoại:</td>
-                    <td>09898754678</td>
+                    <td id="phoneNumber">09898754678</td>
                 </tr>
             </tbody>
         </table>
     </div>
     <div class="row py-3 px-lg-5 info-box">
         <h4>Học tập</h4>
-        <table class="table table-sm">
+        <table id="educationTable" class="table table-sm">
             <tbody>
-                <tr>
-                    <td>25/7/2010 - 30/8/2013</td>
-                    <td>Đại học Công nghệ - ĐHQG Hà Nội</td>
-                </tr>
-                <tr>
-                    <td>25/7/2010 - 30/8/2013</td>
-                    <td>Đại học Công nghệ - ĐHQG Hà Nội</td>
-                </tr>
             </tbody>
         </table>
     </div>
 </div>
 <div class="col-5 py-3 px-lg-5 info-box">
     <h4>Kinh nghiệm</h4>
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">
-            <p>FPT Sortware - Web Developer</p>
-            <p class="note">7/2019 - 12/2020</p>
-        </li>
-        <li class="list-group-item">
-            <p>Garena - Tester</p>
-            <p class="note">12/2018 - 6/2029</p>
-        </li>
-        <li class="list-group-item">
-            <p>Morbi leo risus</p>
-            <p class="note">12/2018 - 6/2029</p>
-        </li>
-        <li class="list-group-item">
-            <p>Porta ac consectetur ac</p>
-            <p class="note">7/2019 - 12/2020</p>
-        </li>
+    <ul id="experienceList" class="list-group list-group-flush">
     </ul>
 </div>
 </div>
@@ -346,27 +318,17 @@ view.showPersonal =
 </div>
 <div class="col-5 py-3 px-lg-5 info-box">
     <h4>Kĩ năng</h4>
-    <div class="container">
-        <div class="row">
-            <div class="col py-3"><i class="fas fa-check"></i><span>Python</span></div>
-            <div class="col py-3"><i class="fas fa-check"></i><span>Design</span></div>
-        </div>
-        <div class="row">
-            <div class="col py-3"><i class="fas fa-check"></i><span>HTML</span></div>
-            <div class="col py-3"><i class="fas fa-check"></i><span>CSS</span></div>
-        </div>
-        <div class="row">
-            <div class="col py-3"><i class="fas fa-check"></i><span>JavaStcipt</span></div>
-        </div>
+    <div id="skillList" class="d-flex flex-wrap">
     </div>
 </div>
 </div>`
+
 view.infoPersonalEdit =
 `<div class="row">
 <div class="col">
     <div class=" info-box" style="text-align: center; padding: 30px 0px;">
         <div class="avatar"></div> <br>
-        <h4>Nguyễn Văn Anh</h4>
+        <h4 class="fullname">Nguyễn Văn Anh</h4>
     </div>
 
 </div>
@@ -379,15 +341,15 @@ view.infoPersonalEdit =
             <tbody>
                 <tr>
                     <td>Họ Tên:</td>
-                    <td>Nguyễn Văn A</td>
+                    <td class="fullname"></td>
                 </tr>
                 <tr>
-                    <td>Ngày sinh:</td>
-                    <td>1/2/1998</td>
+                    <td id="dayOfBirth">Ngày sinh:</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>Số điện thoại:</td>
-                    <td>09898754678</td>
+                    <td id="phoneNumber"></td>
                 </tr>
             </tbody>
         </table>
@@ -403,7 +365,7 @@ view.infoPersonalEdit =
     </div>
     <div class="row py-3 px-lg-5 info-box">
         <h4>Học tập</h4>
-        <table class="table table-sm">
+        <table id="educationTable" class="table table-sm">
             <tbody>
                 <tr>
                     <td>25/7/2010 - 30/8/2013</td>
@@ -428,7 +390,7 @@ view.infoPersonalEdit =
 </div>
 <div class="col-5 py-3 px-lg-5 info-box">
     <h4>Kinh nghiệm</h4>
-    <ul class="list-group list-group-flush">
+    <ul id="experienceList" class="list-group list-group-flush">
         <li class="list-group-item">
             <p>FPT Sortware - Web Developer</p>
             <p class="note">7/2019 - 12/2020</p>
@@ -462,18 +424,7 @@ view.infoPersonalEdit =
 </div>
 <div class="col-5 py-3 px-lg-5 info-box">
     <h4>Kĩ năng</h4>
-    <div class="container">
-        <div class="row">
-            <div class="col py-3"><i class="fas fa-check"></i><span>Python</span></div>
-            <div class="col py-3"><i class="fas fa-check"></i><span>Design</span></div>
-        </div>
-        <div class="row">
-            <div class="col py-3"><i class="fas fa-check"></i><span>HTML</span></div>
-            <div class="col py-3"><i class="fas fa-check"></i><span>CSS</span></div>
-        </div>
-        <div class="row">
-            <div class="col py-3"><i class="fas fa-check"></i><span>JavaStcipt</span></div>
-        </div>
+    <div id="skillList" class="d-flex flex-wrap">
     </div>
     <form action="">
         <div class="input-group">

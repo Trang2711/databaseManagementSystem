@@ -1,10 +1,10 @@
-
+window.user = null;
 function handleFormSignIn() {
     var backHome = document.getElementById('backHome');
     backHome.addEventListener('click', event => {
         event.preventDefault()
-        location.reload();
-        // container.innerHTML = view.home
+        // location.reload();
+        initHome()
     })
 
     document.getElementById('signInForm').addEventListener('submit', function(event){
@@ -16,22 +16,27 @@ function handleFormSignUpForCompany() {
     var backHome = document.getElementById('backHome');
     backHome.addEventListener('click', event => {
         event.preventDefault()
-        location.reload();
-        // container.innerHTML = view.home
+        // location.reload();
+        initHome()
+    })
+
+    var signInForm = document.getElementById('signUpForCompanyForm');
+    signInForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        signUp("company");
     })
 }
 function handleFormSignUpForEmployee() {
     var backHome = document.getElementById('backHome');
     backHome.addEventListener('click', event => {
         event.preventDefault()
-        location.reload();
-        // container.innerHTML = view.home
+        // location.reload();
+        initHome()
     })
     var signInForm = document.getElementById('signUpForEmployeeForm');
     signInForm.addEventListener('submit', function (event) {
         event.preventDefault();
-        console.log('jbfgk');
-        signUp();
+        signUpForEmployee("employee");
     })
 }
 
@@ -63,12 +68,18 @@ function signIn() {
         .then(function (snapshot) {
             let account = snapshot.val();
             if(!account){
-                alert('Username không tồn tại!')
-                window.location()
+                alert('Username không tồn tại!');
             } else{
                 let id = Object.getOwnPropertyNames(account)[0];
                 if(account[id].PASSWORD == password){
-                    window.location.href = "./personal.html"
+                    document.cookie = id;
+                    if(account[id].ACCOUNT_TYPE == "Job seeker"){
+                        window.location.href = "./personal.html";
+                    }
+                    else if(account[id].ACCOUNT_TYPE == "Enterprise"){
+                        window.location.href = "./company.html";
+                        // initCompanyPage(account[id]);
+                    }
                 }
                 else{
                     alert('Username hoặc password bị sai!')
@@ -77,7 +88,7 @@ function signIn() {
         })
 }
 
-function  signUp(params) {
+function  signUp(account_type) {
     var username = document.getElementById('usernameInput').value;
     var password = document.getElementById('passwordInput').value;
     var email = document.getElementById('emailInput').value;
@@ -124,17 +135,26 @@ function  signUp(params) {
     if(check){
         var rootRef = firebase.database().ref();
         var newPostKey = rootRef.child("/ACCOUNT").push().key;
-        var newData = {
-            ACCOUNT_TYPE: "Job seeker",
-            ID: newPostKey,
-            PASSWORD: password,
-            USERNAME: username
-        };
+        var newData = null;
+        if(account_type == "employee"){
+            newData = {
+                ACCOUNT_TYPE: "Job seeker",
+                ID: newPostKey,
+                PASSWORD: password,
+                USERNAME: username
+            };
+        } else if(account_type == "company"){
+            newData = {
+                ACCOUNT_TYPE: "Enterprise",
+                ID: newPostKey,
+                PASSWORD: password,
+                USERNAME: username
+            };
+        }
         var update = {};
         update['/ACCOUNT/' + newPostKey] = newData;
         rootRef.update(update);
         alert("Đăng kí thành công!");
     }
 }
-
 

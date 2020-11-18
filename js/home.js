@@ -1,4 +1,5 @@
 function directionPage(){
+    var container = document.getElementById('container');
     var signIn = document.getElementById("signIn");
     var signUpForCompany = document.getElementById('signUpForCompany');
     var signUpForEmployee = document.getElementById('signUpForEmployee');
