@@ -1,6 +1,6 @@
 const view = {};
 view.signIn =
-`<div class="form-wrapper">
+    `<div class="form-wrapper">
 <a id="backHome" href="#"><i class="fas fa-arrow-left"></i></a>
 <header>
 <img src="./images/logo.svg" alt="">
@@ -23,7 +23,7 @@ view.signIn =
 </div>`;
 
 view.signUpForCompany =
-`<div class="form-wrapper">
+    `<div class="form-wrapper">
 <a id="backHome" href="#"><i class="fas fa-arrow-left"></i></a>
 <header>
 <img src="./images/logo.svg" alt="">
@@ -59,8 +59,8 @@ view.signUpForCompany =
 </form>
 </div>`;
 
-view.signUpForEmployee = 
-`<div class="form-wrapper">
+view.signUpForEmployee =
+    `<div class="form-wrapper">
 <a id="backHome" href="#"><i class="fas fa-arrow-left"></i></a>
 <header>
 <img src="./images/logo.svg" alt="">
@@ -98,7 +98,7 @@ view.signUpForEmployee =
 </div>`;
 
 view.home =
-`<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    `<nav class="navbar navbar-expand-lg navbar-light bg-light">
 <a class="navbar-brand" href="#">
     <img src="./images/logo.svg" width="100" height="100" alt="">
 </a>
@@ -256,7 +256,7 @@ view.home =
 </div>`
 
 view.infoPersonalLayout =
-`<div class="d-flex justify-content-around bg-light">
+    `<div class="d-flex justify-content-around bg-light">
 <div class="side-left bg-light">
     <ul class="side-left-nav">
         <li id="showInfo" class="active">Thông tin<i class="fas fa-info"></i></li>
@@ -268,8 +268,8 @@ view.infoPersonalLayout =
 </div>
 </div>`
 
-view.showPersonal = 
-`<div class="row">
+view.showPersonal =
+    `<div class="row">
 <div class="col">
     <div class=" info-box" style="text-align: center; padding: 30px 0px;">
         <div class="avatar"></div> <br>
@@ -324,7 +324,7 @@ view.showPersonal =
 </div>`
 
 view.infoPersonalEdit =
-`<div class="row">
+    `<div class="row">
 <div class="col">
     <div class=" info-box" style="text-align: center; padding: 30px 0px;">
         <div class="avatar"></div> <br>
@@ -437,8 +437,8 @@ view.infoPersonalEdit =
 </div>
 </div>`
 
-view.search = 
-`<section class="search">
+view.search =
+    `<section class="search">
 <form class="search-form">
     <div class="form-group row">
         <label for="inputJob" class="col-form-label">Tìm kiếm</label>
@@ -558,8 +558,8 @@ view.search =
 <button type="button" class="btn btn-primary">Tạo CV của bạn</button>
 </section>`
 
-view.infoCompany = 
-`<div class="wrapper-container ">
+view.infoCompany =
+    `<div class="wrapper-container ">
 <header>
     <h5 id="companyName"></h5>
     <div class="info-group">
@@ -586,7 +586,7 @@ view.infoCompany =
     <div class="">
         <h5 style="padding-left: 5px; margin-bottom: 20px; display: inline-block;">Công việc đã đăng</h5>
         <div type="button" class="add-job" data-toggle="modal"
-            data-target="#editJobModal">
+            data-target="#addJobModal">
             <i class="fas fa-plus-circle"></i>
         </div>
 
@@ -621,35 +621,41 @@ view.infoCompany =
             </div>
         </div>
 
-        <div class="modal fade" id="editJobModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        <div class="modal fade" id="addJobModal" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header show-job-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Kiến trúc sư hệ thống</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Thêm mới công việc</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
+                    <form id="createJob">
                     <div class="modal-body show-job-body">
+                        <h6>Tiêu đề</h6>
+                        <input name="title" class="form-control form-control-sm" type="text"
+                            placeholder="Nhập tiêu đề bài viết">
                         <h6>Chức vụ</h6>
-                        <input class="form-control form-control-sm" type="text"
-                            placeholder=".form-control-sm">
+                        <input name="senioriryLevel" class="form-control form-control-sm" type="text"
+                            placeholder="Developer, fresher">
                         <h6>Thành phố</h6>
-                        <input class="form-control form-control-sm" type="text"
-                            placeholder=".form-control-sm">
+                        <input class="form-control form-control-sm" type="text" name="city"
+                            placeholder="Hà Nội">
                         <h6>Loại công việc</h6>
-                        <input class="form-control form-control-sm" type="text"
-                            placeholder=".form-control-sm">
+                        <input name="jobType" class="form-control form-control-sm" type="text"
+                            placeholder="Fulltime">
                         <h6>Mô tả</h6>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea class="form-control" name="decription" rows="3"></textarea>
                         <h6>Yêu cầu kĩ năng</h6>
-                        <input class="form-control form-control-sm" type="text"
+                        <input name="skill" class="form-control form-control-sm" type="text"
                             placeholder=".form-control-sm">
+                        <p id="notify"> </p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-primary">Save changes</button>
+                        <button type="submit" class="btn btn-sm btn-primary">Save changes</button>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>

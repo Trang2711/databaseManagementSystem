@@ -89,7 +89,6 @@ async function showInfoCV() {
         }
     });
 
-    var showJobModal = document.getElementById('showJobModal');
     var listDetailBtn = document.getElementsByClassName('detail-btn');
     for (let i = 0; i < listDetailBtn.length; i++) {
         listDetailBtn[i].addEventListener('click', async function () {
@@ -118,6 +117,7 @@ async function showInfoCV() {
             }
         })
     }
+    createJob();
 }
 
 async function showEditInfoCV() {
@@ -133,4 +133,43 @@ function fillTextByClass(elementClass, text) {
     for (let i = 0; i < elements.length; i++) {
         elements[i].innerText = text;
     }
+}
+
+function createJob() {
+    let createJobForm = document.getElementById('createJob');
+    createJobForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        let title = document.getElementsByName("title")[0].value;
+        let senioriryLevel = document.getElementsByName("senioriryLevel")[0].value;
+        let city = document.getElementsByName("city")[0].value;
+        let jobType = document.getElementsByName("jobType")[0].value;
+        let decription = document.getElementsByName("decription")[0].value;
+        let skill = document.getElementsByName("skill")[0].value;
+
+        var notify = document.getElementById("notify");
+
+        if (title && senioriryLevel && city && jobType && decription && skill){
+            var rootRef = firebase.database().ref();
+            var newPostKey = rootRef.child("/ACCOUNT").push().key;
+            var currentDate = new Date();
+            var date = currentDate.getDate();
+            var month = currentDate.getMonth();
+            var year = currentDate.getFullYear();
+            var newData = {
+                CITY: city,
+                COMPANY_ID: userId,
+                DESCRIPTION: decription,
+                EMPLOYMENT_TYPE: jobType,
+                PUBLISHED_DATE: date + "/" + month + "/" + year,
+                SENIORIRY_LEVEL: senioriryLevel,
+                TITLE: title
+            };
+            var update = {};
+            update['/JOB/' + newPostKey] = newData;
+            rootRef.update(update);
+            notify.innerText = "Đăng kí thành công!";
+        } else{
+            notify.innerText = "Vui lòng nhập đầy đủ các trường!";
+        }
+    })
 }
