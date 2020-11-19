@@ -52,7 +52,7 @@ view.signUpForCompany =
 </div>
 <div class="form-group">
   <label for="re-passwordInput">Nhập lại password</label>
-  <input type="password" class="form-control" id="re-passwordHelp">
+  <input type="password" class="form-control" id="re-passwordInput">
   <small id="re-passwordHelp" class="form-text"></small>
 </div>
 <button type="submit" class="btn btn-primary">Đăng kí</button>
@@ -561,28 +561,25 @@ view.search =
 view.infoCompany = 
 `<div class="wrapper-container ">
 <header>
-    <h5>FPT Software</h5>
+    <h5 id="companyName"></h5>
     <div class="info-group">
         Website:
-        <a href="https://www.fpt-software.com/" target="_blank">https://www.fpt-software.com/</a>
+        <a id="companyWebsite" href="https://www.fpt-software.com/" target="_blank"></a>
     </div>
     <div>
         <div class="info-group">
             <i class="far fa-envelope"></i>
-            <span>Email: company24@gmail.com</span>
+            <span id="companyEmail"></span>
         </div>
         <div class="info-group">
             <i class="fas fa-phone"></i>
-            <span>Số điện thoại: 0958589576</span>
+            <span id="companyPhone"></span>
         </div>
     </div>
 </header>
 <div class="description">
     <h5>About us</h5>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit odit amet? Voluptatem id, eum
-        dicta
-        placeat neque incidunt exercitationem? Harum ducimus maxime in possimus nihil, culpa at? Blanditiis,
-        alias.
+    <p id="companyDescription">
     </p>
 </div>
 <div class="list-job">
@@ -593,70 +590,7 @@ view.infoCompany =
             <i class="fas fa-plus-circle"></i>
         </div>
 
-        <div class="row">
-            <div class="col" style="margin-bottom: 30px;">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="delete-card">
-                            <i class="far fa-trash-alt"></i>
-                        </div>
-                        <h5>Packaging assistant manager nhà máy Nhật mới thành lập</h5>
-                        <p class="lead" style="font-size: 20px;">Công ty: ABC Company<br>Lương: 10 - 15
-                            triệu<br>Vị trí tuyển dụng: developer java, developer javascript</p>
-                        <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
-                            data-target="#showJobModal">
-                            Chi tiết
-                        </button>
-
-                        <button type="button" class="btn btn-sm btn-secondary" data-toggle="modal"
-                            data-target="#editJobModal">
-                            Chỉnh sửa
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="delete-card">
-                            <i class="far fa-trash-alt"></i>
-                        </div>
-                        <h5>Packaging assistant manager nhà máy Nhật mới thành lập</h5>
-                        <p class="lead" style="font-size: 20px;">Công ty: ABC Company<br>Lương: 10 - 15
-                            triệu<br>Vị trí tuyển dụng: developer java, developer javascript</p>
-                        <a class="btn btn-primary btn-sm" href="#" role="button">Chi tiết</a>
-                    </div>
-
-                </div>
-            </div>
-            <div class="w-100"></div>
-            <div class="col" style="margin-bottom: 30px;">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="delete-card">
-                            <i class="far fa-trash-alt"></i>
-                        </div>
-                        <h5>Packaging assistant manager nhà máy Nhật mới thành lập</h5>
-                        <p class="lead" style="font-size: 20px;">Công ty: ABC Company<br>Lương: 10 - 15
-                            triệu<br>Vị trí tuyển dụng: developer java, developer javascript</p>
-                        <a class="btn btn-primary btn-sm" href="#" role="button">Chi tiết</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="delete-card">
-                            <i class="far fa-trash-alt"></i>
-                        </div>
-                        <h5>Packaging assistant manager nhà máy Nhật mới thành lập</h5>
-                        <p class="lead" style="font-size: 20px;">Công ty: ABC Company<br>Lương: 10 - 15
-                            triệu<br>Vị trí tuyển dụng: developer java, developer javascript</p>
-                        <a class="btn btn-primary btn-sm" href="#" role="button">Chi tiết</a>
-                    </div>
-                </div>
-            </div>
+        <div id="listJob" class="row">
         </div>
 
         <!-- Modal -->
@@ -665,25 +599,23 @@ view.infoCompany =
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header show-job-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Kiến trúc sư hệ thống</h5>
+                        <h5 class="modal-title" id="modalTitle"></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body show-job-body">
                         <h6>Chức vụ</h6>
-                        <p>Senior</p>
+                        <p id="senioriryLevel"></p>
                         <h6>Thành phố</h6>
-                        <p>Hà Nội</p>
+                        <p id="city"></p>
                         <h6>Loại công việc</h6>
-                        <p>Full time</p>
+                        <p id="jobType"></p>
                         <h6>Mô tả</h6>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, unde quaerat eaque
-                            enim voluptas saepe vitae numquam accusamus aperiam laudantium repudiandae
-                            explicabo dolorum obcaecati tempore! Harum nihil porro rerum expedita!
+                        <p id="desciptionJob">
                         </p>
                         <h6>Yêu cầu kĩ năng</h6>
-                        <p><span>Python</span><span>Networking</span></p>
+                        <p id="skillList"></p>
                     </div>
                 </div>
             </div>

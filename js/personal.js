@@ -3,8 +3,9 @@ var userId = null;
 var rootRef = firebase.database().ref();
 async function initPersonalPage() {
     var decodedCookie = decodeURIComponent(document.cookie);
-    var ca = decodedCookie.split(';');
-    userId = ca[0];
+    var ca = decodedCookie.split('; ');
+    userId = ca[ca.length - 2];
+    console.log(userId);
     var snapshot = await rootRef.child('/ACCOUNT/' + userId).once("value");
     console.log(snapshot.val());
     user = snapshot.val();

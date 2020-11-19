@@ -33,10 +33,10 @@ function handleFormSignUpForEmployee() {
         // location.reload();
         initHome()
     })
-    var signInForm = document.getElementById('signUpForEmployeeForm');
-    signInForm.addEventListener('submit', function (event) {
+    var signUpForm = document.getElementById('signUpForEmployeeForm');
+    signUpForm.addEventListener('submit', function (event) {
         event.preventDefault();
-        signUpForEmployee("employee");
+        signUp("employee");
     })
 }
 

@@ -32,13 +32,21 @@
                         <a class="nav-link text-dark" href="#">Đánh giá công ty</a>
                     </li>
                     <li class="nav-item text-dark">
-                        <a id="myCV" class="nav-link text-dark" href="#">Hồ sơ công ty</a>
+                        <a id="companyCV" class="nav-link text-dark" href="#">Hồ sơ công ty</a>
                     </li>
                 </ul>
                 <span style="width: 35%;"></span>
                 <ul class="navbar-nav">
                     <li>
-                        <a class="nav-link text-dark" href="#"><i class="far fa-user" st></i>Fpt Software</a>
+                        <div class="dropdown">
+                            <a class="nav-link text-dark" id="companyAccountIcon" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="userAccountIcon">
+                                <a id="lognOut" class="dropdown-item" href="#">Đăng xuất</a>
+                            </div>
+                        </div>
                     </li>
                     <li></li>
                 </ul>
@@ -58,8 +66,16 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
+
+    <script src="./js/app.js"></script>
+
     <script src="./js/view.js"></script>
-    <script src="./js/personal.js"></script>
+    <script src="./js/form.js"></script>
+    <script src="./js/company.js"></script>
 </body>
 
 </html>
