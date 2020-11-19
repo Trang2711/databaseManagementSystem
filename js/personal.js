@@ -13,6 +13,7 @@ async function initPersonalPage() {
     var container = document.querySelector('.container-body')
     var findJob = document.getElementById('findJobBtn');
     var cv = document.getElementById("myCV");
+    
     var signOut = document.getElementById('lognOut');
     var userAccount = document.getElementById('userAccountIcon');
 
@@ -22,6 +23,7 @@ async function initPersonalPage() {
     findJob.addEventListener('click', event => {
         event.preventDefault();
         container.innerHTML = view.search;
+        search();
     });
 
     cv.addEventListener('click', event => {

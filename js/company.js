@@ -100,7 +100,7 @@ async function showInfoCV() {
             fillTextById('desciptionJob', job[id].DESCRIPTION);
             let snapshot2 = await rootRef.child('/JOB_SKILL').orderByChild("JOB_ID").equalTo(parseInt(id)).once('value');
             let jobSkill = snapshot2.val();
-            if (!jobSkill) {
+            if (jobSkill) {
                 let listIdJobSkill = Object.getOwnPropertyNames(jobSkill);
                 listIdJobSkill.forEach(idJobSkill => {
                     var id = jobSkill[idJobSkill].SKILL_ID;
